@@ -1,4 +1,4 @@
-<?php namespace Grumbl\LaraveLDataTable\Exceptions;
+<?php namespace Grumbl\LaraveLDataTables\Exceptions;
 
 use Exception;
 

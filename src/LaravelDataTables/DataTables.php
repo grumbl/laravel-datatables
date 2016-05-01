@@ -2,7 +2,7 @@
 
 use Grumbl\LaravelDataTables\Columns\ColumnRender;
 use Grumbl\LaravelDataTables\Config\DataTableConfig;
-use Grumbl\LaravelDataTables\Exceptions\NoDriverFoundException;
+use Grumbl\LaraveLDataTables\Exceptions\NoDriverFoundException;
 use Illuminate\Http\Request;
 use View;
 

@@ -102,7 +102,7 @@ abstract class DataTableConfig
         $html[] = '</tbody>';
         $html[] = '</table>';
 
-        return implode("", $html);
+        return implode('', $html);
     }
 
     public function getHtmlWithJson($id) {
