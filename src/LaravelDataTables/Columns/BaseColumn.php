@@ -4,7 +4,7 @@ abstract class BaseColumn
 {
     protected $columnAttributes;
 
-    public function __construct($columnName = null, $settings = null)
+    public function __construct($columnName = null, $settings = [])
     {
         if ($columnName) {
             $this->setColumnName($columnName);
