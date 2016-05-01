@@ -56,7 +56,7 @@ class DataTables
         foreach ($response['data'] as $key => $data) {
             foreach ($this->config->getColumns() as $subkey => $column) {
                 if ($column->getRender() instanceof ColumnRender) {
-                    $data[$subkey] = View::make(['template' => $column->getRender()->getRender()])->with($data)->render();
+                    $data[$subkey] = View::make($column->getRender()->getRender())->with($data)->render();
                 }
             }
             $response['data'][$key] = $data;
