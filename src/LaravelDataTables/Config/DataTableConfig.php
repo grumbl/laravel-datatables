@@ -53,6 +53,11 @@ abstract class DataTableConfig
         return $this->columns;
     }
 
+    public function getColumnWithIndex()
+    {
+        return array_values($this->columns);
+    }
+
     public function getColumn($name)
     {
         $columns = $this->getColumns();
@@ -78,7 +83,7 @@ abstract class DataTableConfig
     {
         $sorting = [];
         foreach ($columns as $sortColumn) {
-            foreach ($this->getColumns() as $key => $column) {
+            foreach ($this->getColumnWithIndex() as $key => $column) {
                 if ($sortColumn[0]->getColumnName() == $column->getColumnName()) {
                     $sorting[] = [$key, $sortColumn[1]];
                 }
