@@ -1,11 +1,11 @@
 <?php namespace Grumbl\LaravelDataTables\Providers;
 
-use Grumbl\LaravelDataTables\DataTable;
-use Illuminate\Support\ServiceProvider;
+use Grumbl\LaravelDataTables\DataTables;
+use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
 use Response;
 use Request;
 
-class LaravelDataTableServiceProvider extends ServiceProvider
+class ServiceProvider extends LaravelServiceProvider
 {
     /**
      * Bootstrap any application services.
@@ -25,7 +25,7 @@ class LaravelDataTableServiceProvider extends ServiceProvider
     public function register()
     {
         Response::macro('dataTable', function ($configuration) {
-            $dataTable = new DataTable;
+            $dataTable = new DataTables;
             $dataTable->setRequest(Request::duplicate())
                 ->setConfig($configuration);
 

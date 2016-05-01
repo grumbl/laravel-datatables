@@ -6,7 +6,7 @@ use Grumbl\LaraveLDataTables\Exceptions\NoDriverFoundException;
 use Illuminate\Http\Request;
 use View;
 
-class DataTable
+class DataTables
 {
     private $request;
     private $config;
