@@ -1,8 +1,8 @@
 <?php namespace Grumbl\LaravelDataTables\Drivers;
 
-use App\Services\DataTables\Config\DataTableConfig;
-use App\Services\DataTables\Columns\Column;
-use App\Services\DataTables\Columns\JoinColumn;
+use Grumbl\LaravelDataTables\Config\DataTableConfig;
+use Grumbl\LaravelDataTables\Columns\Column;
+use Grumbl\LaravelDataTables\Columns\JoinColumn;
 use Illuminate\Http\Request;
 use Propel\Runtime\ActiveQuery\Join;
 
