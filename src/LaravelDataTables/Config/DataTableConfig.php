@@ -95,7 +95,7 @@ abstract class DataTableConfig
 
         $config['columns'] = $this->getColumnsJson();
 
-        $config['order'] = 
+        $config['order'] = $this->sorting;
 
         return json_encode($config, true);
     }
