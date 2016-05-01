@@ -1,4 +1,4 @@
-<?php namespace Grumbl\LaravelDataTables\DataTables;
+<?php namespace Grumbl\LaravelDataTables;
 
 use Grumbl\LaravelDataTables\Columns\ColumnRender;
 use Grumbl\LaravelDataTables\Config\DataTableConfig;
