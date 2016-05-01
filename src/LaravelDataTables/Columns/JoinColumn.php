@@ -6,13 +6,13 @@ class JoinColumn extends BaseColumn
 {
     protected $joinName;
 
-    public function __construct($columnDefinition = null, $searchable = null, $visible = null, $name = null)
+    public function __construct($columnDefinition = null, $settings = [])
     {
         if ($columnDefinition) {
             $this->setColumnDefinition($columnDefinition);
         }
 
-        parent::__construct(null, $searchable, $visible, $name);
+        parent::__construct(null, $settings);
     }
 
     public function setColumnDefinition($columnDefinition)
