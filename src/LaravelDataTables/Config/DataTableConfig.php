@@ -8,6 +8,7 @@ abstract class DataTableConfig
     protected $query;
     protected $endpoint;
     protected $columns = [];
+    protected $sorting = [];
 
     public function __construct()
     {
@@ -73,6 +74,19 @@ abstract class DataTableConfig
         return null;
     }
 
+    public function sortBy($columns)
+    {
+        $sorting = [];
+        foreach ($columns as $sortColumn) {
+            foreach ($this->getColumns() as $key => $column) {
+                if ($sortColumn[0]->getColumnName() == $columns->getColumnName()) {
+                    $sorting[] = [$key, $sortColumn[1]];
+                }
+            }
+        }
+        $this->sorting = $sorting;
+    }
+
     public function getJson()
     {
         $config = [];
@@ -80,6 +94,8 @@ abstract class DataTableConfig
         $config['endpoint'] = $this->endpoint;
 
         $config['columns'] = $this->getColumnsJson();
+
+        $config['order'] = 
 
         return json_encode($config, true);
     }
