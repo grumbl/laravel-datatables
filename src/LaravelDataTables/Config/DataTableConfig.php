@@ -79,7 +79,7 @@ abstract class DataTableConfig
         $sorting = [];
         foreach ($columns as $sortColumn) {
             foreach ($this->getColumns() as $key => $column) {
-                if ($sortColumn[0]->getColumnName() == $columns->getColumnName()) {
+                if ($sortColumn[0]->getColumnName() == $column->getColumnName()) {
                     $sorting[] = [$key, $sortColumn[1]];
                 }
             }
